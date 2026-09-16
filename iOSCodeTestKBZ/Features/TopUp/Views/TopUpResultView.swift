@@ -118,7 +118,7 @@ struct TopUpResultView: View {
             }
         }
         .padding(.p16)
-        .background(.white.opacity(0.96), in: RoundedRectangle(cornerRadius: .r18, style: .continuous))
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: .r18, style: .continuous))
     }
 
     private var transactionIdRow: some View {

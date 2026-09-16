@@ -9,6 +9,11 @@ struct iOSCodeTestKBZApp: App {
     private let sharedModelContainer: ModelContainer
 
     init() {
+        try? FileManager.default.createDirectory(
+            at: URL.applicationSupportDirectory,
+            withIntermediateDirectories: true
+        )
+
         do {
             let schema = Schema([TopUpTransaction.self])
             let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
